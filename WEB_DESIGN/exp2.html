@@ -3,47 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <title>Login Page</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffffff;
+        font-family: Arial, sans-serif;
+      }
+      .login-box {
+        border: 2px solid black;
+        padding: 30px 40px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      .login-box h3 {
+        margin-bottom: 20px;
+      }
+      .login-box label {
+        display: inline-block;
+        width: 100px;
+        text-align: right;
+      }
+      .login-box input[type="text"],
+      .login-box input[type="password"] {
+        border: 2px solid black;
+        padding: 5px;
+        margin: 5px 0;
+      }
+      .login-box input[type="submit"],
+      .login-box input[type="reset"] {
+        border: 2px solid black;
+        padding: 8px 15px;
+        background-color: white;
+        font-weight: bold;
+        margin: 10px 5px 0;
+        cursor: pointer;
+      }
+    </style>
   </head>
-  <body bgcolor="#ffffff">
-    <h3>Login Page</h3>
-    <form action="exp3.html" target="content">
-      <label>User Name:</label>
-      <input
-        type="text"
-        name="username"
-        style="border: 2px solid black; padding: 5px; margin-left: 10px"
-        required
-      /><br /><br />
-
-      <label>Password:</label>
-      <input
-        type="password"
-        name="password"
-        style="border: 2px solid black; padding: 5px; margin-left: 15px"
-        required
-      /><br /><br />
-
-      <input
-        type="submit"
-        value="Submit"
-        style="
-          border: 2px solid black;
-          padding: 8px 15px;
-          margin-right: 10px;
-          background-color: white;
-          font-weight: bold;
-        "
-      />
-      <input
-        type="reset"
-        value="Reset"
-        style="
-          border: 2px solid black;
-          padding: 8px 15px;
-          background-color: white;
-          font-weight: bold;
-        "
-      />
-    </form>
+  <body>
+    <div class="login-box">
+      <h3>Login Page</h3>
+      <form action="exp3.html" target="content">
+        <div>
+          <label>User Name:</label>
+          <input type="text" name="username" required />
+        </div>
+        <div>
+          <label>Password:</label>
+          <input type="password" name="password" required />
+        </div>
+        <div>
+          <input type="submit" value="Submit" />
+          <input type="reset" value="Reset" />
+        </div>
+      </form>
+    </div>
   </body>
 </html>

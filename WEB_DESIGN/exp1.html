@@ -3,42 +3,94 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Web Design</title>
     <style>
-      table,
-      tr,
-      th,
-      td {
-        border: 1px solid;
-        padding: 6px;
-        border-collapse: collapse;
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      header {
+        background-color: rgb(222, 175, 114);
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+      }
+      header .logo {
+        font-weight: bold;
+        margin-right: 20px;
+      }
+      nav {
+        flex-grow: 1;
+      }
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: flex-end;
+        gap: 20px;
+      }
+      nav ul li a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+      }
+
+      main {
+        display: flex;
+        height: calc(100vh - 60px);
+      }
+      aside {
+        background-color: rgb(250, 231, 206);
+        padding: 20px;
+        width: 200px;
+      }
+      aside a {
+        display: block;
+        margin-bottom: 10px;
+        text-decoration: none;
+        color: black;
+      }
+      section {
+        flex-grow: 1;
+        text-align: center;
+        padding: 20px;
+      }
+      iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
       }
     </style>
   </head>
   <body>
-    <table style="width: 90vw">
-      <tr style="background-color: rgb(222, 175, 114)">
-        <th>Logo</th>
-        <th colspan="4">Website Name</th>
-      </tr>
-      <tr style="background-color: rgb(250, 231, 206)">
-        <td><a href="#" target="content">Home</a></td>
-        <td><a href="exp2.html" target="content">Login</a></td>
-        <td><a href="#" target="content">Registration</a></td>
-        <td><a href="#" target="content">Catalogue</a></td>
-        <td><a href="#" target="content">Cart</a></td>
-      </tr>
-      <tr>
-        <td>
-          CSE <br />
-          ECE <br />
-          EEE <br />
-          CIVIL
-        </td>
-        <td rowspan="4" colspan="4" style="text-align: center">
-          <iframe name="content" width="100%" height="300"></iframe>
-        </td>
-      </tr>
-    </table>
+    <header>
+      <div class="logo">Logo</div>
+      <nav>
+        <ul>
+          <li><a href="#Desc" target="content">Home</a></li>
+          <li><a href="exp2.html" target="content">Login</a></li>
+          <li><a href="#" target="content">Registration</a></li>
+          <li><a href="exp3.html" target="content">Catalogue</a></li>
+          <li><a href="exp4.html" target="content">Cart</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <aside>
+        <a href="#" target="content">CSE</a>
+        <a href="#" target="content">ECE</a>
+        <a href="#" target="content">EEE</a>
+        <a href="#" target="content">CIVIL</a>
+      </aside>
+      <section>
+        <iframe name="content"></iframe>
+      </section>
+      <section id="Desc">
+        <p>Description of WebSite</p>
+      </section>
+    </main>
   </body>
 </html>
