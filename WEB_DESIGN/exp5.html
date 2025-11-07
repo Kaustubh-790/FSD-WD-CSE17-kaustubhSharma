@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      h1 {
+        text-align: center;
+        color: #333;
+        margin-top: 30px;
+      }
+
+      form {
+        background-color: #fff;
+        width: 400px;
+        margin: 30px auto;
+        padding: 25px 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      input[type="text"],
+      input[type="password"],
+      input[type="date"],
+      input[type="email"],
+      input[type="tel"] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      input[type="radio"],
+      input[type="checkbox"] {
+        margin-right: 5px;
+      }
+
+      button {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-right: 10px;
+        font-size: 14px;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      button:nth-of-type(2) {
+        background-color: #f44336;
+      }
+
+      button:nth-of-type(2):hover {
+        background-color: #d32f2f;
+      }
+
+      hr {
+        width: 80%;
+        margin: 40px auto;
+        border: 1px solid #ddd;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Registration Form</h1>
+    <form>
+      <label>First Name</label>
+      <input type="text" name="fname" required />
+
+      <label>Last Name</label>
+      <input type="text" name="lname" required />
+
+      <label>Password</label>
+      <input type="password" name="password" />
+
+      <label>Date Of Birth</label>
+      <input type="date" name="date" required />
+
+      <label>Gender</label>
+      <input type="radio" name="gender" value="male" /> Male
+      <input type="radio" name="gender" value="female" /> Female
+      <input type="radio" name="gender" value="others" /> Others
+
+      <br /><br />
+
+      <label>Email</label>
+      <input type="email" name="email" required />
+
+      <label>Phone</label>
+      <input type="tel" name="phone" required />
+
+      <label>Languages Known</label>
+      <input type="checkbox" name="lang" value="eng" /> English <br />
+      <input type="checkbox" name="lang" value="telg" /> Telugu <br />
+      <input type="checkbox" name="lang" value="hin" /> Hindi <br />
+      <input type="checkbox" name="lang" value="tam" /> Tamil <br />
+      <input type="checkbox" name="lang" value="pun" /> Punjabi <br /><br />
+
+      <label>Address</label>
+      <label>Flat number</label>
+      <input type="text" />
+      <label>Society name</label>
+      <input type="text" />
+      <label>City</label>
+      <input type="text" />
+      <label>State</label>
+      <input type="text" />
+
+      <button type="submit">Register</button>
+      <button type="reset">Reset</button>
+    </form>
+    <hr />
+  </body>
+</html>
