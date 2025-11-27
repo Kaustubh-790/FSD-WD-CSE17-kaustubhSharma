@@ -46,11 +46,6 @@
         box-sizing: border-box;
       }
 
-      input[type="radio"],
-      input[type="checkbox"] {
-        margin-right: 5px;
-      }
-
       button {
         background-color: #4caf50;
         color: white;
@@ -80,19 +75,61 @@
         border: 1px solid #ddd;
       }
     </style>
+
+    <script>
+      function validateForm() {
+        let email = document.getElementById("email").value.trim();
+        let phone = document.getElementById("phone").value.trim();
+        let name = document.getElementById("fname").value.trim();
+        let password = document.getElementById("password").value.trim();
+
+        let namePattern = /^[A-Za-z]+$/;
+        if (!namePattern.test(name)) {
+          alert("Name should contain only alphabets.");
+          return false;
+        }
+
+        if (name.length < 6) {
+          alert("Name should not be less than 6 characters.");
+          return false;
+        }
+
+        if (password.length < 6) {
+          alert("Password should not be less than 6 characters.");
+          return false;
+        }
+
+        let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!emailPattern.test(email)) {
+          alert("Invalid email!\n\nCorrect format: name@domain.com");
+          return false;
+        }
+
+        let phonePattern = /^[0-9]{10}$/;
+        if (!phonePattern.test(phone)) {
+          alert(
+            "Invalid phone number!\n\nPhone must contain exactly 10 digits."
+          );
+          return false;
+        }
+
+        return true;
+      }
+    </script>
   </head>
 
   <body>
     <h1>Registration Form</h1>
-    <form>
+
+    <form onsubmit="return validateForm()">
       <label>First Name</label>
-      <input type="text" name="fname" required />
+      <input type="text" id="fname" name="fname" required />
 
       <label>Last Name</label>
       <input type="text" name="lname" required />
 
       <label>Password</label>
-      <input type="password" name="password" />
+      <input type="password" id="password" name="password" required />
 
       <label>Date Of Birth</label>
       <input type="date" name="date" required />
@@ -105,10 +142,10 @@
       <br /><br />
 
       <label>Email</label>
-      <input type="email" name="email" required />
+      <input type="email" id="email" name="email" required />
 
       <label>Phone</label>
-      <input type="tel" name="phone" required />
+      <input type="tel" id="phone" name="phone" required />
 
       <label>Languages Known</label>
       <input type="checkbox" name="lang" value="eng" /> English <br />
@@ -130,6 +167,7 @@
       <button type="submit">Register</button>
       <button type="reset">Reset</button>
     </form>
+
     <hr />
   </body>
 </html>

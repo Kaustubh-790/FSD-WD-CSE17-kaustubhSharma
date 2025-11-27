@@ -1,0 +1,35 @@
+body {
+  background-image: url("https://picsum.photos/1000/700");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.box {
+  background-image: url("https://picsum.photos/200/200");
+  background-repeat: repeat;
+  width: 300px;
+  padding: 20px;
+  border: 2px solid black;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+a:link {
+  color: white;
+  text-decoration: none;
+}
+
+a:visited {
+  color: purple;
+}
+
+a:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+a:active {
+  color: green;
+}
