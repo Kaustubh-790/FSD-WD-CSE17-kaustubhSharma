@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>DOM manipulation</h2>
+
+    <p>Click the buttons to change the image:</p>
+
+    <button
+      onclick="document.getElementById('door').src='Assets/door_open.png'"
+    >
+      Open Door
+    </button>
+
+    <img
+      id="door"
+      src="Assets/door_closed.png"
+      style="width: 150px; display: block; margin: 20px 0"
+    />
+
+    <button
+      onclick="document.getElementById('door').src='Assets/door_closed.png'"
+    >
+      Close Door
+    </button>
+  </body>
+</html>
