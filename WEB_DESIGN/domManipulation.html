@@ -1,26 +1,55 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <style>
+      button {
+        padding: 8px 12px;
+        margin: 5px;
+        border: 2px solid #ccc;
+        background-color: #f5f5f5;
+        cursor: pointer;
+      }
+
+      button.active {
+        background-color: #4caf50;
+        color: white;
+        border-color: #388e3c;
+      }
+    </style>
+  </head>
+
   <body>
     <h2>DOM manipulation</h2>
 
-    <p>Click the buttons to change the image:</p>
+    <p>Click the buttons to change the clock time:</p>
 
-    <button
-      onclick="document.getElementById('door').src='Assets/door_open.png'"
-    >
-      Open Door
-    </button>
+    <button onclick="showTwelveOClock(this)">12 o’clock</button>
 
     <img
-      id="door"
-      src="Assets/door_closed.png"
+      id="clock"
+      src="Assets/12o'clock.png"
       style="width: 150px; display: block; margin: 20px 0"
     />
 
-    <button
-      onclick="document.getElementById('door').src='Assets/door_closed.png'"
-    >
-      Close Door
-    </button>
+    <button onclick="showTenOClock(this)">Time: 10 o’clock</button>
+
+    <script>
+      function setActiveButton(button) {
+        document.querySelectorAll("button").forEach((btn) => {
+          btn.classList.remove("active");
+        });
+        button.classList.add("active");
+      }
+
+      function showTwelveOClock(button) {
+        document.getElementById("clock").src = "Assets/12o'clock.png";
+        setActiveButton(button);
+      }
+
+      function showTenOClock(button) {
+        document.getElementById("clock").src = "Assets/10o'clock.png";
+        setActiveButton(button);
+      }
+    </script>
   </body>
 </html>
